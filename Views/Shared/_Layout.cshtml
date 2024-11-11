@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TravelAgency_Diachenko</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/shared.css" />
+    <link href="~/css/login_and_registration.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header-top">
+        <div class="logo"></div>
+        <div class="button-header">
+            <button class="button" id="click-to-hide">Войти</button>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("_LoginRegistrationPartial")
+
+    <img class="img-header" src="~/images/HULIN.jpg" />
+
+    <div id="header-bottom">
+        <div class="menu">
+            <ul>
+                <li><a asp-controller="Home" asp-action="SiteInformation">Главная</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                <li><a asp-controller="Home" asp-action="Country">Страны</a></li>
+                <li><a asp-controller="Home" asp-action="Service">Услуги</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Каталог продуктов -->
+    <section id="catalog" class="catalog">
+        <h2>Our Products</h2>
+        <div class="catalog-container">
+            <div class="product-card">
+                <img src="~/images/phone_case.jpg" alt="Phone Case">
+                <h3>Phone Case</h3>
+                <p>Durable and stylish phone case for ultimate protection.</p>
+                <span>$15.99</span>
+            </div>
+            <div class="product-card">
+                <img src="~/images/charger.jpg" alt="Charger">
+                <h3>Charger</h3>
+                <p>Fast-charging USB-C charger compatible with all devices.</p>
+                <span>$12.99</span>
+            </div>
+            <div class="product-card">
+                <img src="~/images/earbuds.jpg" alt="Wireless Earbuds">
+                <h3>Wireless Earbuds</h3>
+                <p>High-quality sound and long-lasting battery life.</p>
+                <span>$29.99</span>
+            </div>
+            <div class="product-card">
+                <img src="~/images/screen_protector.jpg" alt="Screen Protector">
+                <h3>Screen Protector</h3>
+                <p>Scratch-resistant and ultra-clear screen protector.</p>
+                <span>$9.99</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <script src="~/js/shared_script.js"></script>
+    <script src="~/js//login_and_registration_script.js"></script>
+</body>
+</html>
+
+
+
+
+
